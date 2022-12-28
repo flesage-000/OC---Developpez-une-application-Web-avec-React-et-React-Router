@@ -1,9 +1,11 @@
-.appartmentBanner {
+.carousel {
   background-image: var(--appartmentBanner);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: calc(var(--corner-radius-default) * 1.5);
+
+  overflow: hidden;
 
   max-width: 1240px;
   min-width: 100%;
