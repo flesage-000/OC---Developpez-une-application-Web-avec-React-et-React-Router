@@ -1,0 +1,11 @@
+.tag {
+  border: solid 0 var(--color-bg-medium-light-red);
+  background-color: var(--color-bg-medium-light-red);
+  border-radius: var(--corner-radius-default);
+  color: var(--color-normal-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.96px;
+
+  padding: 3px 22px;
+}
