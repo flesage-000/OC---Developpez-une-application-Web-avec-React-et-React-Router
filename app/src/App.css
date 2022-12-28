@@ -1,1 +1,9 @@
-.App {}
+.App {
+  padding: 40px 100px;
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 20px;
+  }
+}

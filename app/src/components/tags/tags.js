@@ -1,4 +1,4 @@
-import './tags.css';
+import './Tags.css';
 
 function Tags() {
   return (<button className="tag">tag-name</button>)

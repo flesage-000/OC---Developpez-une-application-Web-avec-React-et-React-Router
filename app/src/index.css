@@ -3,7 +3,7 @@
 
 :root {
   /* Colors: backgrounds */
-  --color-bg-main: rgba(255,255,255,1);;
+  --color-bg-main: rgba(255,255,255,1);
   --color-bg-medium-light-red: rgba(255,96,96,1);
   /* Colors: texts */
   --color-normal-text: rgba(255,255,255,1);
@@ -20,4 +20,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 480px) {
 }

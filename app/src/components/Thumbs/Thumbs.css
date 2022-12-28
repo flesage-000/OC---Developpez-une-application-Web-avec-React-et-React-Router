@@ -1,0 +1,35 @@
+.thumb {
+  background: linear-gradient(180deg, var(--color-bg-medium-light-red) 0%, rgba(0, 0, 0, 1) 250%);
+  border-radius: var(--corner-radius-default);
+
+  height: 340px;
+  width: 340px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-end;
+}
+
+.thumb h2 {
+  color: var(--color-normal-text);
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+@media (max-width: 480px) {
+  .thumb {
+    --padding-sides: 15px;
+    width: calc(100% - 2 * var(--padding-top-bottom));
+    padding: 15px var(--padding-sides);
+  }
+}
