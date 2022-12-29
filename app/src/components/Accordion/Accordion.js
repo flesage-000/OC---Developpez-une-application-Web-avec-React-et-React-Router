@@ -1,41 +1,38 @@
-import { createElement } from 'react';
+import { useState } from 'react';
 import './Accordion.css';
 
-function manageAccordion(event) {
-  event.preventDefault();
+function Accordion({name, content}) {
+  const [isOpen, setIsOpen] = useState(true);
+  const handleManageAccordion = (event) => {
+    event.preventDefault();
 
-  let button = event.target.nodeName == "BUTTON" ? event.target : event.target.parentNode;
-  let buttonParent = button.parentNode;
+    let button = event.target.nodeName == "BUTTON" ? event.target : event.target.parentNode;
+    let buttonParent = button.parentNode;
 
-  if (buttonParent.classList.contains("up")) {
-    buttonParent.classList.remove("up");
-    buttonParent.classList.add("down");
-  } else {
-    buttonParent.classList.add("up");
-    buttonParent.classList.remove("down");
+    if (isOpen) {
+      setIsOpen(false);
+      buttonParent.classList.remove("up");
+      buttonParent.classList.add("down");
+    } else {
+      setIsOpen(true);
+      buttonParent.classList.add("up");
+      buttonParent.classList.remove("down");
+    }
   }
-}
-
-function Button() {
-  let button = createElement("button", {type: "button", onClick: manageAccordion}, createElement("span", null, "Equipement"), createElement("span", {className: "arrow"}))
-
-  return (button)
-}
-
-function Accordion(props) {
-  let content = '';
-  if (typeof props.content === "object") {
-    const items = props.content;
+  let conten = '';
+  if (typeof content === "object") {
+    const items = content;
     const list = items.map((item) => <li key={item.toString()}>{item}</li>)
-    content = <ul>{list}</ul>;
+    conten = <ul>{list}</ul>;
   } else {
-    content = <p>{props.content}</p>;
+    conten = <p>{content}</p>;
   }
-  content = <div className='content'>{content}</div>
 
-  return (<div className="equipment down">
-    <button type="button" onClick={manageAccordion}><span>{props.name}</span><span className="arrow"></span></button>
-    {content}
+  conten = <div className='content'>{conten}</div>
+
+  return (<div className={`equipment ${isOpen ? 'down' : 'up'}`} >
+    <button type="button" onClick={handleManageAccordion}><span>{name}</span><span className="arrow"></span></button>
+    {conten}
   </div>)
 }
 
