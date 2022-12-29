@@ -1,35 +1,32 @@
-import React from 'react';
+import { useState } from 'react';
 import './Accordion.css';
 
-export default class Accordion extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isOpen: this.props.isOpen || false };
+function Accordion({name, content, open}) {
+  let [isOpen, setIsOpen] = useState(open || false);
+
+  const handleAccordion = (event) => {
+    event.preventDefault();
+
+    isOpen = setIsOpen(!isOpen);
   }
 
-  render() {
-    const handleAccordion = (event) => {
-      event.preventDefault();
+  const SetContent = () => {
+    let accordionContent = '';
+    if (typeof content === "object") {
+      const items = content.map((item) => <li key={item.toString()}>{item}</li>)
+      accordionContent = <ul>{items}</ul>;
+    } else accordionContent = <p>{content}</p>;
+    return accordionContent;
+  }
 
-      this.state.isOpen = this.setState({isOpen: !this.state.isOpen});
-    }
-
-    const SetContent = () => {
-      let content = '';
-      if (typeof this.props.content === "object") {
-        const items = this.props.content.map((item) => <li key={item.toString()}>{item}</li>)
-        content = <ul>{items}</ul>;
-      } else content = <p>{this.props.content}</p>;
-      return content;
-    }
-
-    return (
-    <div className='accordion'>
-      <button className={`arrow ${this.state.isOpen ? 'up' : 'down'}`} type='button' onClick={handleAccordion}>{this.props.name}</button>
-      <div className='content'>
-        <SetContent />
-      </div>
+  return (
+  <div className='accordion'>
+    <button className={`arrow ${isOpen ? 'up' : 'down'}`} type='button' onClick={handleAccordion}>{name}</button>
+    <div className='content'>
+      <SetContent />
     </div>
-    );
-  }
+  </div>
+  );
 }
+
+export default Accordion;
