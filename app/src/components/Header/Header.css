@@ -6,6 +6,11 @@
 }
 
 .mainHeader {
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -27,7 +32,7 @@
   display: inline-block;
 }
 .mainHeader li:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 57px;
 }
 .mainHeader a {
   color: var(--color-bg-medium-light-red);
@@ -39,7 +44,11 @@
 }
 
 @media (max-width: 480px) {
-  .siteLogo {
+  .mainHeader {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+  .mainHeader .siteLogo {
     background-color: var(--color-bg-main);
     background-image: url('./medias/kasa_logo.png');
     background-size: var(--site-logo-width-mobile) var(--site-logo-height-mobile);
@@ -49,5 +58,8 @@
   }
   .mainHeader a {
     text-transform: uppercase;
+  }
+  .mainHeader li:not(:last-child) {
+    margin-right: 10px;
   }
 }
