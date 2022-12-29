@@ -1,0 +1,41 @@
+:root {
+  --site-logo-height-desktop: 68px;
+  --site-logo-width-desktop: 211px;
+  --site-logo-height-mobile: 47px;
+  --site-logo-width-mobile: 147px;
+
+  --footer-padding-top-desktop: 66px;
+  --footer-padding-bottom-desktop: 29px;
+  --footer-padding-top-mobile: 62px;
+  --footer-padding-bottom-mobile: 62px;
+}
+
+.mainFooter {
+  background-color: var(--color-bg-black);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 66px 0 29px 0;
+  height: calc(209px - var(--footer-padding-bottom-desktop) - var(--footer-padding-top-desktop));
+}
+/* .mainFooter img {} */
+.mainFooter p {
+  color: var(--color-normal-text);
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .mainFooter {
+    padding-bottom: 62px;
+    height: calc(209px - var(--footer-padding-bottom-mobile) - var(--footer-padding-top-mobile));
+  }
+  .mainFooter p {
+    font-size: 12px;
+  }
+}

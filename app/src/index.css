@@ -5,6 +5,7 @@
 :root {
   /* Colors: backgrounds */
   --color-bg-main: rgba(255,255,255,1);
+  --color-bg-black: rgba(0,0,0,1);
   --color-bg-medium-light-red: rgba(255,96,96,1);
   --color-bg-very-light-gray: rgba(246, 246, 246, 1);
   /* Colors: texts */
