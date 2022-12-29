@@ -1,0 +1,49 @@
+:root {
+  --site-logo-height-desktop: 68px;
+  --site-logo-width-desktop: 211px;
+  --site-logo-height-mobile: 47px;
+  --site-logo-width-mobile: 147px;
+}
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.mainHeader .siteLogo {
+  background-color: var(--color-bg-main);
+  background-image: url('./medias/kasa_logo.png');
+  background-size: var(--site-logo-width-desktop) var(--site-logo-height-desktop);
+  text-indent: -9000px;
+
+  display: block;
+  height: var(--site-logo-height-desktop);
+  width: var(--site-logo-width-desktop);
+}
+.mainHeader ul {}
+.mainHeader li {
+  display: inline-block;
+}
+.mainHeader li:not(:last-child) {
+  margin-right: 10px;
+}
+.mainHeader a {
+  color: var(--color-bg-medium-light-red);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.mainHeader a.active {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .siteLogo {
+    background-color: var(--color-bg-main);
+    background-image: url('./medias/kasa_logo.png');
+    background-size: var(--site-logo-width-mobile) var(--site-logo-height-mobile);
+
+    height: var(--site-logo-height-mobile);
+    width: var(--site-logo-width-mobile);
+  }
+}
