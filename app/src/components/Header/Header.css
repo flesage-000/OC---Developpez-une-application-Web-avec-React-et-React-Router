@@ -4,6 +4,7 @@
   --site-logo-height-mobile: 47px;
   --site-logo-width-mobile: 147px;
 }
+
 .mainHeader {
   display: flex;
   flex-direction: row;
@@ -45,5 +46,8 @@
 
     height: var(--site-logo-height-mobile);
     width: var(--site-logo-width-mobile);
+  }
+  .mainHeader a {
+    text-transform: uppercase;
   }
 }
