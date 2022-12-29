@@ -1,39 +1,35 @@
-import { useState } from 'react';
+import React from 'react';
 import './Accordion.css';
 
-function Accordion({name, content}) {
-  const [isOpen, setIsOpen] = useState(true);
-  const handleManageAccordion = (event) => {
-    event.preventDefault();
+export default class Accordion extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOpen: this.props.isOpen || false };
+  }
 
-    let button = event.target.nodeName == "BUTTON" ? event.target : event.target.parentNode;
-    let buttonParent = button.parentNode;
+  render() {
+    const handleAccordion = (event) => {
+      event.preventDefault();
 
-    if (isOpen) {
-      setIsOpen(false);
-      buttonParent.classList.remove("up");
-      buttonParent.classList.add("down");
-    } else {
-      setIsOpen(true);
-      buttonParent.classList.add("up");
-      buttonParent.classList.remove("down");
+      this.state.isOpen = this.setState({isOpen: !this.state.isOpen});
     }
-  }
-  let conten = '';
-  if (typeof content === "object") {
-    const items = content;
-    const list = items.map((item) => <li key={item.toString()}>{item}</li>)
-    conten = <ul>{list}</ul>;
-  } else {
-    conten = <p>{content}</p>;
-  }
 
-  conten = <div className='content'>{conten}</div>
+    const SetContent = () => {
+      let content = '';
+      if (typeof this.props.content === "object") {
+        const items = this.props.content.map((item) => <li key={item.toString()}>{item}</li>)
+        content = <ul>{items}</ul>;
+      } else content = <p>{this.props.content}</p>;
+      return content;
+    }
 
-  return (<div className={`equipment ${isOpen ? 'down' : 'up'}`} >
-    <button type="button" onClick={handleManageAccordion}><span>{name}</span><span className="arrow"></span></button>
-    {conten}
-  </div>)
+    return (
+    <div className='accordion'>
+      <button className={`arrow ${this.state.isOpen ? 'up' : 'down'}`} type='button' onClick={handleAccordion}>{this.props.name}</button>
+      <div className='content'>
+        <SetContent />
+      </div>
+    </div>
+    );
+  }
 }
-
-export default Accordion;

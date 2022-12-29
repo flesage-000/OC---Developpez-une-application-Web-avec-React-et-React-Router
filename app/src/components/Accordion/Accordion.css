@@ -1,25 +1,9 @@
-.equipment {
+.accordion {
   background-color: var(--color-bg-very-light-gray);
   border-radius: var(--corner-radius-default);
 }
-.equipment.down .content {
-  display: none;
-}
-.equipment.down .arrow  {
-  padding: 6px;
-  margin-top: -6px;
-}
-.equipment.up .content {
-  border-radius: var(--corner-radius-default);
 
-  display: block;
-  padding: 40px 20px 27px;
-}
-.equipment.up .arrow  {
-  padding: 6px;
-  margin-top: 6px;
-}
-.equipment button {
+.accordion button {
   color: var(--color-normal-text);
   border-radius: var(--corner-radius-default);
   font-family: var(--font-main);
@@ -27,38 +11,48 @@
   font-weight: 500;
   line-height: 25.67px;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: stretch;
-  align-items: center;
+  text-align: left;
 
   width: 100%;
   padding: 13px 20px;
 }
-
-.equipment button span {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
+.accordion button.arrow::after {
+  padding: 8px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+}
+.accordion button.arrow.up::after {
+  top: calc(50% - 8px / 2);
+}
+.accordion button.arrow.down::after {
+  top: calc(50% - 26.87px / 2);
 }
 
-.equipment ul,
-.equipment p {
+.accordion .content {
+  display: none;
+}
+
+.accordion .up + .content {
+  border-radius: var(--corner-radius-default);
+
+  display: block;
+  padding: 40px 20px 27px;
+}
+
+.accordion ul,
+.accordion p {
   color: var(--color-reverse-text);
   font-family: var(--font-main);
   font-weight: 400;
 }
-.equipment ul {
+.accordion ul {
   font-size: 18px;
   line-height: 25.67px;
 }
-.equipment p {
+.accordion p {
   font-size: 24px;
   line-height: 34.22px;
 }
 
-@media (max-width: 480px) {
-  .equipment {}
-}
+/* @media (max-width: 480px) {} */
