@@ -1,11 +1,11 @@
 import './App.css';
-import Tags from "./components/Tags/Tags.js"
-import Thumbs from './components/Thumbs/Thumbs';
-import Accordion from './components/Accordion/Accordion';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Carousel from './components/Carousel/Carousel';
-import Cover from './components/Cover/Cover';
+import Tags from "../../components/Tags/Tags"
+import Thumbs from '../../components/Thumbs/Thumbs';
+import Accordion from '../../components/Accordion/Accordion';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Carousel from '../../components/Carousel/Carousel';
+import Cover from '../../components/Cover/Cover';
 
 function App() {
   return (
