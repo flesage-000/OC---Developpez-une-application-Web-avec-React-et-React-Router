@@ -15,8 +15,6 @@
 }
 
 .thumb h2 {
-  color: var(--color-normal-text);
-  font-family: var(--font-main);
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
