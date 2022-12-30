@@ -12,6 +12,9 @@ function Header() {
           <a href='#'>à propos</a>
         </li>
       </ul>
+      <div className='illustration' text='Chez vous, partout et ailleurs'>
+        <p>Chez vous, partout et ailleurs</p>
+      </div>
     </header>
   );
 }

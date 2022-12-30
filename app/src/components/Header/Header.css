@@ -13,21 +13,25 @@
 
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
 }
 .mainHeader .siteLogo {
   background-color: var(--color-bg-main);
   background-image: url('./medias/kasa_logo.png');
+  background-repeat: no-repeat;
   background-size: var(--site-logo-width-desktop) var(--site-logo-height-desktop);
   text-indent: -9000px;
 
+  flex: 1;
   display: block;
   height: var(--site-logo-height-desktop);
   width: var(--site-logo-width-desktop);
 }
-.mainHeader ul {}
+.mainHeader ul {
+  flex: 1;
+}
 .mainHeader li {
   display: inline-block;
 }
@@ -41,6 +45,22 @@
 }
 .mainHeader a.active {
   text-decoration: underline;
+}
+
+.mainHeader .illustration {
+  background-image: url('./medias/kasa_illustration.png');
+  background-color: var(--color-bg-main);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: calc(var(--corner-radius-default) * 1.5);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+
+  height: 223px;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
