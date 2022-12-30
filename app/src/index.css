@@ -42,6 +42,13 @@ body .App > div {
   width: calc(100% - var(--body-margin-sides-desktop) * 2);
   max-width: calc(100% - var(--body-margin-sides-desktop) * 2);
 }
+a {
+  color: var(--color-bg-medium-light-red);
+  text-decoration: none;
+}
+a.underline {
+  text-decoration: underline;
+}
 
 @media (max-width: 480px) {
   body {

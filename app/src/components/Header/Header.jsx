@@ -10,7 +10,7 @@ function Header() {
           <Link to='/About'>à propos</Link>
         </li>
         <li>
-          <Link to='/' className='active'>accueil</Link>
+          <Link to='/' className='underline'>accueil</Link>
         </li>
       </ul>
       <div className='illustration' text='Chez vous, partout et ailleurs'>

@@ -1,0 +1,21 @@
+.error {
+  text-align: center;
+}
+.error p {
+  color: var(--color-bg-medium-light-red);
+}
+.error p:first-of-type {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 136.9px;
+}
+.error p:last-of-type {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+}
+.error a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.96px;
+}

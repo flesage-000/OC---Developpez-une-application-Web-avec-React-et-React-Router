@@ -35,13 +35,8 @@
   margin-right: 57px;
 }
 .mainHeader a {
-  color: var(--color-bg-medium-light-red);
   font-weight: 500;
   text-transform: capitalize;
-  text-decoration: none;
-}
-.mainHeader a.active {
-  text-decoration: underline;
 }
 
 .mainHeader .illustration {
