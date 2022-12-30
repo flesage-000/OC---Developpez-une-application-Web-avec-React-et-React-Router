@@ -1,8 +1,12 @@
 import './About.css';
+import Header from '../../components/Header/Header';
 
 function About() {
   return(
-    <p>About</p>
+    <div className="App">
+      <Header />
+      <p>About</p>
+    </div>
   )
 }
 
