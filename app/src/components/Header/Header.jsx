@@ -6,10 +6,10 @@ function Header() {
       <a className='siteLogo' href="/">Kasa</a>
       <ul>
         <li>
-          <a href='/' className='active'>accueil</a>
+          <a href='/About'>à propos</a>
         </li>
         <li>
-          <a href='/About'>à propos</a>
+          <a href='/' className='active'>accueil</a>
         </li>
       </ul>
       <div className='illustration' text='Chez vous, partout et ailleurs'>

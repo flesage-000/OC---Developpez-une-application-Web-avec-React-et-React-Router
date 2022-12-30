@@ -28,9 +28,10 @@
   flex: 1;
 }
 .mainHeader li {
-  display: inline-block;
+  display: block;
+  float: right;
 }
-.mainHeader li:not(:last-child) {
+.mainHeader li:not(:first-child) {
   margin-right: 57px;
 }
 .mainHeader a {
@@ -78,7 +79,7 @@
   .mainHeader a {
     text-transform: uppercase;
   }
-  .mainHeader li:not(:last-child) {
+  .mainHeader li:not(:first-child) {
     margin-right: 10px;
   }
 }
