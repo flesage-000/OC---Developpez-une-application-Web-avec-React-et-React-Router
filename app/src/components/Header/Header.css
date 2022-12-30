@@ -11,8 +11,6 @@
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-
-  margin: 0 100px;
 }
 .mainHeader .siteLogo {
   background-color: var(--color-bg-main);

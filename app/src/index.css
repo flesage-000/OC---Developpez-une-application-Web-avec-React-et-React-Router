@@ -17,6 +17,10 @@
 
   /* ROUNDED */
   --corner-radius-default: 10px;
+
+  /* Margin */
+  --body-margin-sides-desktop: 100px;
+  --body-margin-sides-mobile: 20px;
 }
 
 @import "./assets/styles/arrows.css";
@@ -32,10 +36,22 @@ body {
 
   margin: 0;
 }
+body .App > header,
+body .App > div {
+  margin: 0 100px;
+  width: calc(100% - var(--body-margin-sides-desktop) * 2);
+  max-width: calc(100% - var(--body-margin-sides-desktop) * 2);
+}
 
 @media (max-width: 480px) {
   body {
     font-size: 12px;
     line-height: 17.11px;
+  }
+  body .App > header,
+  body .App > div {
+    margin: 0 20px;
+    width: calc(100% - var(--body-margin-sides-mobile) * 2);
+    max-width: calc(100% - var(--body-margin-sides-mobile) * 2);
   }
 }
