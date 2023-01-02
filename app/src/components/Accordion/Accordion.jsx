@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Accordion.css';
 
-function Accordion({name, content, open}) {
+function Accordion({name, contentText, contentList, open}) {
   let [isOpen, setIsOpen] = useState(open || false);
 
   const handleAccordion = (event) => {
@@ -12,10 +13,10 @@ function Accordion({name, content, open}) {
 
   const SetContent = () => {
     let accordionContent = '';
-    if (typeof content === "object") {
-      const items = content.map((item) => <li key={item.toString()}>{item}</li>)
+    if (contentList != null) {
+      const items = contentList.map((item) => <li key={item.toString()}>{item}</li>)
       accordionContent = <ul>{items}</ul>;
-    } else accordionContent = <p>{content}</p>;
+    } else accordionContent = <p>{contentText}</p>;
     return accordionContent;
   }
 
@@ -28,5 +29,12 @@ function Accordion({name, content, open}) {
   </div>
   );
 }
+
+Accordion.propTypes = {
+  name: PropTypes.string,
+  contentText: PropTypes.string,
+  contentList: PropTypes.array,
+  open: PropTypes.bool,
+};
 
 export default Accordion;
