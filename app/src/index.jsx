@@ -1,8 +1,8 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 import App from './pages/Home/App';
 import About from './pages/About/About';
 import Error from './pages/Error/Error';
