@@ -11,40 +11,57 @@
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+
+  padding: 20px 0 0 0;
 }
 .mainHeader .siteLogo {
-  background-color: var(--color-bg-main);
-  background-image: url('./medias/kasa_logo.png');
-  background-repeat: no-repeat;
-  background-size: var(--site-logo-width-desktop) var(--site-logo-height-desktop);
-  text-indent: -9000px;
-
-  flex: 1;
-  display: block;
-  height: var(--site-logo-height-desktop);
-  width: var(--site-logo-width-desktop);
+  flex: 0;
 }
+@media (min-width: 801px) {
+  .mainHeader .siteLogo {
+    height: var(--site-logo-height-desktop);
+    width: var(--site-logo-width-desktop);
+  }
+}
+@media (max-width: 800px) {
+  .mainHeader .siteLogo {
+    height: var(--site-logo-height-mobile);
+    width: var(--site-logo-width-mobile);
+  }
+}
+
 .mainHeader ul {
+  align-self: center;
   flex: 1;
 }
 .mainHeader li {
   display: block;
   float: right;
 }
-.mainHeader li:not(:first-child) {
-  margin-right: 57px;
+
+@media (max-width: 800px) {
+  .mainHeader li:not(:first-child) { margin-right: 10px; }
+}
+@media (min-width: 801px) {
+  .mainHeader li:not(:first-child) { margin-right: 57px; }
 }
 .mainHeader a {
   font-weight: 500;
-  text-transform: capitalize;
+}
+@media (max-width: 800px) {
+  .mainHeader a { text-transform: uppercase; }
+}
+@media (min-width: 801px) {
+  .mainHeader a { text-transform: capitalize; }
 }
 
 .mainHeader .illustration {
-  background-image: url('./medias/kasa_illustration.png');
+  background-image: url('./../../assets/medias/kasa_illustration.png');
   background-color: var(--color-bg-main);
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: calc(var(--corner-radius-default) * 1.5);
+  text-align: center;
 
   display: flex;
   flex-direction: row;
@@ -55,26 +72,18 @@
   width: 100%;
 }
 
-.mainHeader .illustration p {
-  font-size: 48px;
+.mainHeader p {
   font-weight: 500;
-  line-height: 68.45px;
 }
-
-@media (max-width: 480px) {
-  /* .mainHeader {} */
-  .mainHeader .siteLogo {
-    background-color: var(--color-bg-main);
-    background-image: url('./medias/kasa_logo.png');
-    background-size: var(--site-logo-width-mobile) var(--site-logo-height-mobile);
-
-    height: var(--site-logo-height-mobile);
-    width: var(--site-logo-width-mobile);
+@media (max-width: 800px) {
+  .mainHeader p {
+    font-size: 24px;
+    line-height: 24px;
   }
-  .mainHeader a {
-    text-transform: uppercase;
-  }
-  .mainHeader li:not(:first-child) {
-    margin-right: 10px;
+}
+@media (min-width: 801px) {
+  .mainHeader p {
+    font-size: 48px;
+    line-height: 68.45px;
   }
 }

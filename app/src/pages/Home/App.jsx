@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+
 import Tags from "../../components/Tags/Tags"
 import Thumbs from '../../components/Thumbs/Thumbs';
 import Accordion from '../../components/Accordion/Accordion';
@@ -22,9 +23,7 @@ function App() {
     return (
       <div>
         {
-          data.length > 0 && data.map((thumb) => { console.log("thumb", thumb);
-            return <Thumbs key={thumb.id} title={thumb.title} />
-          })
+          data.length > 0 && data.map(thumb => <Thumbs key={thumb.id} data={thumb} />)
         }
       </div>
     )

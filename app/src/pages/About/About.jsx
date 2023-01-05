@@ -1,11 +1,12 @@
 import './About.css';
+
 import Header from '../../components/Header/Header';
 import Accordion from '../../components/Accordion/Accordion';
 import Footer from '../../components/Footer/Footer';
 
 function About() {
   return(
-    <div className="App">
+    <section className="App">
       <Header />
       <Accordion name="TestList" contentText="" contentList={[
 			"Équipements de base",
@@ -23,7 +24,7 @@ function About() {
 
       <Accordion name="Sécurité" contentText="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." contentList={null} open={false} />
       <Footer />
-    </div>
+    </section>
   )
 }
 

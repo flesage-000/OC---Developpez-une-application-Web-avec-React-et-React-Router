@@ -1,23 +1,22 @@
+import { Link } from 'react-router-dom';
 import './Error.css';
-import { useRouteError } from "react-router-dom";
+
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 function Error() {
-  const error = useRouteError();
-  console.error(error);
-
   return(
     <div className="App">
       <Header />
-      <div className='error'>
+      <div className="error">
         <p>
-          {error.status}
+          404
         </p>
         <p>
-          {error.status ? 'Oups! La page que vous demandez n\'existe pas.' : error.statusText || error.message}
+          Oups! La page que vous demandez n'existe pas.
         </p>
-        <a className='underline' href='/'>Retourner sur la page d'accueil</a>
+        <Link to="/"
+              className="underline">Retourner sur la page d'accueil</Link>
       </div>
       <Footer />
     </div>

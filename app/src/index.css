@@ -25,40 +25,62 @@
 
 @import "./assets/styles/arrows.css";
 
+html,
+body {
+  max-width: 100%;
+  min-width: calc(380px - 2 * var(--body-margin-sides-mobile));
+}
+html,
+body,
+body > div,
+body > div > div {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
 body {
   color: var(--color-normal-text);
   font-family: var(--font-main);
-  font-size: 24px;
   font-weight: 400;
-  line-height: 34.22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  margin: 0;
 }
-body .App > header,
-body .App > div {
-  margin: 0 100px;
-  width: calc(100% - var(--body-margin-sides-desktop) * 2);
-  max-width: calc(100% - var(--body-margin-sides-desktop) * 2);
-}
-a {
-  color: var(--color-bg-medium-light-red);
-  text-decoration: none;
-}
-a.underline {
-  text-decoration: underline;
-}
-
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   body {
     font-size: 12px;
     line-height: 17.11px;
   }
-  body .App > header,
-  body .App > div {
-    margin: 0 20px;
-    width: calc(100% - var(--body-margin-sides-mobile) * 2);
-    max-width: calc(100% - var(--body-margin-sides-mobile) * 2);
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 24px;
+    line-height: 34.22px;
   }
+}
+
+body > div {
+  width: 100%;
+}
+
+body .App > header,
+body .App > div {
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  body .App > header,
+  body .App > div { width: calc(100% - 2 * var(--body-margin-sides-mobile)); }
+}
+@media (min-width: 800px) {
+  body .App > header,
+  body .App > div { width: calc(100% - 2 * var(--body-margin-sides-desktop)); }
+}
+
+a {
+  color: var(--color-bg-medium-light-red);
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
 }

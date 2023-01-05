@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Accordion.css';
 
@@ -29,12 +28,5 @@ function Accordion({name, contentText, contentList, open}) {
   </div>
   );
 }
-
-Accordion.propTypes = {
-  name: PropTypes.string,
-  contentText: PropTypes.string,
-  contentList: PropTypes.array,
-  open: PropTypes.bool,
-};
 
 export default Accordion;

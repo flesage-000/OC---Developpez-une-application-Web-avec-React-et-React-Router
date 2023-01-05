@@ -1,14 +1,12 @@
-import PropTypes from 'prop-types';
+import { Link, useParams } from 'react-router-dom';
 import './Thumbs.css';
 
-function Thumbs({ title }) {
-  return (<div className="thumb">
-    <h2>{ title }</h2>
-  </div>)
-}
+function Thumbs({ data }) {
+  // const { kasaId } = useParams();
 
-Thumbs.propTypes = {
-  title: PropTypes.string,
+  return (<div className="thumb">
+    <h2><Link to={`/home/${data.id}`}>{ data.title }</Link></h2>
+  </div>)
 }
 
 export default Thumbs;
