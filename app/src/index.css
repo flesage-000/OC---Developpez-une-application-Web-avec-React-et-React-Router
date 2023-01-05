@@ -25,18 +25,21 @@
 
 @import "./assets/styles/arrows.css";
 
-html,
-body {
+html {
+  height: 100%;
+  min-height: 100%;
   max-width: 100%;
-  min-width: calc(380px - 2 * var(--body-margin-sides-mobile));
 }
-html,
 body,
 body > div,
 body > div > div {
   height: 100%;
   min-height: 100%;
   width: 100%;
+  min-width: calc(380px - 2 * var(--body-margin-sides-mobile));
+}
+
+body > div > div {
 }
 
 body {
