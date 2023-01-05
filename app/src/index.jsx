@@ -10,11 +10,11 @@ import Error from './pages/Error/Error';
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/Home",
     element: <App />,
   },
   {
-    path: "/home/:kasaId",
+    path: "/Home/:kasaId",
     element: <App />,
   },
   {
