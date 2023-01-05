@@ -21,7 +21,7 @@ function App() {
 
   const ThumbsList = () => {
     return (
-      <div>
+      <div className="Home">
         {
           data.length > 0 && data.map(thumb => <Thumbs key={thumb.id} data={thumb} />)
         }
@@ -32,18 +32,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Tags />
       <ThumbsList />
-      <Accordion name="Equipements" contentList={['Climatisation', 'Wi-Fi', 'Cuisine', 'Espace de travail', 'Fer à repasser', 'Sèche-cheveux', 'Cintres']} contentText="" open={false} />
-      <Accordion name="Respect" contentList={null} contentText="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." open={true} />
-      <Cover url="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" />
-      <Carousel pictures={[
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
-		]} />
       <Footer />
     </div>
   );

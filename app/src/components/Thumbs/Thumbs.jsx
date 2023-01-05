@@ -1,10 +1,10 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Thumbs.css';
 
 function Thumbs({ data }) {
-  // const { kasaId } = useParams();
-
-  return (<div className="thumb">
+  return (
+  <div  className="thumb"
+        style={{ "--thumb-bkg": "url(" + data.cover + ")"}}>
     <h2><Link to={`/home/${data.id}`}>{ data.title }</Link></h2>
   </div>)
 }

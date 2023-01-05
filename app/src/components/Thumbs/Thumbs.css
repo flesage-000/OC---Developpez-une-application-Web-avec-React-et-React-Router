@@ -1,9 +1,10 @@
 .thumb {
-  background: linear-gradient(180deg, var(--color-bg-medium-light-red) 0%, rgba(0, 0, 0, 1) 250%);
+  background: linear-gradient(179deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 209%), var(--thumb-bkg) center center no-repeat, var(--color-bg-medium-light-red);
   border-radius: var(--corner-radius-default);
 
-  height: 340px;
-  width: 340px;
+  aspect-ratio: 1 / 1;
+  /* height: 340px;
+  width: 340px; */
   padding: 20px;
 
   display: flex;
@@ -23,8 +24,11 @@
   flex: 0 1 auto;
   align-self: auto;
 }
+.thumb h2 a {
+  color: var(--color-bg-main);
+}
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .thumb {
     --padding-sides: 15px;
     width: calc(100% - 2 * var(--padding-top-bottom));
