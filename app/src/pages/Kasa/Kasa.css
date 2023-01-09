@@ -21,8 +21,6 @@
 
 .Kasa {
   color: var(--color-bg-medium-light-red);
-
-  display: flex;
 }
 @media (max-width: 800px) {
   .Kasa {
@@ -32,6 +30,7 @@
 }
 @media (min-width: 801px) {
   .Kasa {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
