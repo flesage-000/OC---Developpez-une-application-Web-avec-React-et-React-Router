@@ -6,16 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './pages/Home/App';
 import About from './pages/About/About';
+import Kasa from './pages/Kasa/Kasa';
 import Error from './pages/Error/Error';
 
 const router = createBrowserRouter([
   {
-    path: "/Home",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/Home/:kasaId",
-    element: <App />,
+    path: "/Kasa/:kasaId",
+    element: <Kasa />,
   },
   {
     path: "About",

@@ -7,15 +7,10 @@ import Footer from '../../components/Footer/Footer';
 function About() {
   return(
     <div className="App">
+
       <Header />
+
       <div class="about">
-        <Accordion name="TestList" contentText="" contentList={[
-        "Équipements de base",
-        "Micro-Ondes",
-        "Douche italienne",
-        "Frigo",
-        "WIFI"
-      ]} open={false} />
 
         <Accordion name="Fiabilité" contentText="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." contentList={null} open={false} />
 
@@ -25,7 +20,9 @@ function About() {
 
         <Accordion name="Sécurité" contentText="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." contentList={null} open={false} />
       </div>
+
       <Footer />
+
     </div>
   )
 }

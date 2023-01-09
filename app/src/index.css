@@ -8,10 +8,12 @@
   --color-bg-black: rgba(0,0,0,1);
   --color-bg-light-red: rgba(246, 246, 246, 1);
   --color-bg-medium-light-red: rgba(255,96,96,1);
+  --color-bg-silver: rgba(196,196,196,1);
   --color-bg-very-light-gray: rgba(246, 246, 246, 1);
   /* Colors: texts */
   --color-normal-text: rgba(255,255,255,1);
   --color-reverse-text: var(--color-bg-medium-light-red);
+  --color-gainsboro: rgba(227, 227, 227, 1);
 
   /* Fonts */
   --font-main: 'Montserrat', sans-serif;
@@ -75,7 +77,7 @@ body .App > div {
   .App > header,
   .App > div { width: calc(100% - 2 * var(--body-margin-sides-mobile)); }
 }
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .App > header,
   .App > div {
     max-width: 1240px;

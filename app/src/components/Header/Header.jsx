@@ -9,7 +9,7 @@ function Header() {
   const activeClassName = "underline";
   return (
     <header className="mainHeader">
-      <Link to="/Home" className="siteLogo">
+      <Link to="/" className="siteLogo">
         <img  srcSet={logoSrcSet}
               sizes="(max-width: 800px) 145px, 211px"
               src={kasa_logo_red_desktop}
@@ -23,7 +23,7 @@ function Header() {
                     ? activeClassName : undefined}>à propos</NavLink>
         </li>
         <li>
-          <NavLink  to="/Home"
+          <NavLink  to="/"
                     className={({ isActive }) => isActive
                     ? activeClassName : undefined}>accueil</ NavLink>
         </li>

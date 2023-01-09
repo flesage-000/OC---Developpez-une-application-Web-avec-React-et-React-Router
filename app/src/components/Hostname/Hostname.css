@@ -1,0 +1,16 @@
+.hostname {
+  text-align: right;
+  font-weight: 500;
+}
+@media (max-width: 800px) {
+  .hostname {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+}
+@media (min-width: 801px) {
+  .hostname {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
+}

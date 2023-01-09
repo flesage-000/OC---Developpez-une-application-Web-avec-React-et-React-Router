@@ -5,14 +5,25 @@
 
 .accordion button {
   border-radius: var(--corner-radius-default);
-  font-size: 18px;
   font-weight: 500;
-  line-height: 25.67px;
 
   text-align: left;
+  text-transform: capitalize;
 
   width: 100%;
   padding: 13px 20px;
+}
+@media (max-width: 800px) {
+  .accordion button {
+    font-size: 13px;
+    line-height: 18.54px;
+  }
+}
+@media (min-width: 801px) {
+  .accordion button {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
 }
 .accordion button.arrow::after {
   padding: 8px;
@@ -46,6 +57,11 @@
   font-size: 18px;
   line-height: 25.67px;
 }
-/* .accordion p {} */
-
-/* @media (max-width: 480px) {} */
+/* @media (max-width: 800px) {
+  .accordion {
+  }
+}
+@media (min-width: 801px) {
+  .accordion {
+  }
+} */
