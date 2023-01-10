@@ -7,11 +7,11 @@ function Carousel(pictures) {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent(current === picturesLength - 1 ? 0 : current + 1); console.log("nextSlide", current);
+    setCurrent(current === picturesLength - 1 ? 0 : current + 1);
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? picturesLength - 1 : current - 1); console.log("prevSlide", current);
+    setCurrent(current === 0 ? picturesLength - 1 : current - 1);
   };
 
   function Slide(picture) {

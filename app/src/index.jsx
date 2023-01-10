@@ -39,21 +39,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-
-// function Router() {
-//   return (
-//       <BrowserRouter>
-//           <Header/>
-//           <Routes>
-//               <Route path="/" element={<Home />} />
-//               <Route path="logement/:id" element={<Logement />} />
-//               <Route path="/A-Propos" element={<Propos />} />
-//               <Route path="*" element={<ErrorPage />} />
-//           </Routes>
-//           <Footer/>
-//       </BrowserRouter>
-//   );
-// }
-
-// export default Router
