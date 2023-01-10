@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 
 import logements from '../../../public/data/logements.json';

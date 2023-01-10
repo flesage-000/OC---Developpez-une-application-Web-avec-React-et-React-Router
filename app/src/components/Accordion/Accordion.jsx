@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './Accordion.css';
 
 function Accordion({name, contentText, contentList, open}) {
@@ -12,10 +13,12 @@ function Accordion({name, contentText, contentList, open}) {
 
   const SetContent = () => {
     let accordionContent = '';
+
     if (contentList != null) {
       const items = contentList.map((item) => <li key={item.toString()}>{item}</li>)
       accordionContent = <ul>{items}</ul>;
     } else accordionContent = <p>{contentText}</p>;
+
     return accordionContent;
   }
 

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logements from '../../../public/data/logements.json';
@@ -17,8 +16,8 @@ import Error from '../Error/Error';
 function Kasa() {
   const { kasaId } = useParams();
   const kasa = logements.filter(data => data.id == kasaId)[0];
-// console.log("404?", kasa);
   let content = '';
+
   if (kasa !== undefined) {
     content = <div className="App">
     <Header />

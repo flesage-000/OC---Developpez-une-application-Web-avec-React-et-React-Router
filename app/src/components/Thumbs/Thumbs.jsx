@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
+
 import './Thumbs.css';
 
 function Thumbs({ data }) {

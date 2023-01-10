@@ -30,7 +30,6 @@
 
 html {
   user-select: none;
-  -webkit-user-select: none;
 
   max-width: 100%;
 }

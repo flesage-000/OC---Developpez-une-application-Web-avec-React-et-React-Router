@@ -46,9 +46,3 @@
 .star.active:before {
   border-bottom-color: var(--color-bg-medium-light-red);
 }
-/* @media (max-width: 800px) {
-  .star {  }
-}
-@media (min-width: 801px) {
-  .star {  }
-} */

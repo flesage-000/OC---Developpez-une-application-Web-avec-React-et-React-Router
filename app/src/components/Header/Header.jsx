@@ -9,16 +9,6 @@ import kasa_header_about_picture from './../../assets/medias/gustavo-alves-YOXSC
 function Header() {
   const logoSrcSet = `${kasa_logo_red_mobile} 145w, ${kasa_logo_red_desktop} 211w`;
   const activeClassName = "underline";
-  const routes = [{ path: "/" }]
-
-  const useCurrentPath = () => {
-    const location = useLocation()
-    const [{ route }] = matchRoutes(routes, location)
-
-    return route.path
-  }
-
-  console.log("route", useLocation().pathname);
 
   return (
     <header className="mainHeader">
