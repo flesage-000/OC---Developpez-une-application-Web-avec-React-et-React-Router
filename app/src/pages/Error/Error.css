@@ -3,21 +3,69 @@
 }
 .error p {
   color: var(--color-bg-medium-light-red);
+
+  display: block;
+}
+@media (max-width: 800px) {
+  .error p:first-of-type {
+    margin-top: 200px;
+  }
+}
+@media (min-width: 801px) {
+  .error p:first-of-type {
+    margin-top: 175px;
+  }
 }
 .error p:first-of-type {
-  font-size: 96px;
   font-weight: 700;
-  line-height: 136.9px;
 }
-.error p:last-of-type {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 25.67px;
+@media (max-width: 800px) {
+  .error p:first-of-type {
+    font-size: 96px;
+    line-height: 136.9px;
+  }
+}
+@media (min-width: 801px) {
+  .error p:first-of-type {
+    font-size: 288px;
+    line-height: 410.69px;
+  }
+}
 
-  margin-bottom: 133px;
-}
-.error a {
-  font-size: 14px;
+.error p:last-of-type {
   font-weight: 500;
-  line-height: 19.96px;
+}
+@media (max-width: 800px) {
+  .error p:last-of-type {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
+}
+@media (min-width: 801px) {
+  .error p:last-of-type {
+    font-size: 36px;
+    line-height: 51.34px;
+  }
+}
+
+.error a {
+  font-weight: 500;
+
+  display: block;
+}
+@media (max-width: 800px) {
+  .error a {
+    font-size: 14px;
+    line-height: 19.96px;
+
+    margin-top: 133px;
+  }
+}
+@media (min-width: 801px) {
+  .error a {
+    font-size: 18px;
+    line-height: 25.67px;
+
+    margin-top: 182px;
+  }
 }

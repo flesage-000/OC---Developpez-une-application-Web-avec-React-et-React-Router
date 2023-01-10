@@ -30,8 +30,8 @@ function Carousel(pictures) {
 
         { pictures.pictures.map((picture, index) => <Slide key={ index + 1 } data={ [picture, index] } />) }
 
-        <a className="prev" onClick={ prevSlide }>&#10094;</a>
-        <a className="next" onClick={ nextSlide }>&#10095;</a>
+        { picturesLength > 1 ? <a className="prev" onClick={ prevSlide }>&#10094;</a> : null }
+        { picturesLength > 1 ? <a className="next" onClick={ nextSlide }>&#10095;</a> : null }
 
       </div>
 

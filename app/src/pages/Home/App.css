@@ -20,11 +20,7 @@
     margin-top: 22px;
   }
 }
-/* @media (min-width: 451px) AND (max-width: 800px) {
-  .App .Home {
-    width: calc(100% - 2 * 25px - 2 * var(--body-margin-sides-mobile));
-  }
-} */
+
 @media (min-width: 451px) AND (max-width: 950px) {
   .App .Home {
     border-radius: calc(var(--corner-radius-default) * 2.5);

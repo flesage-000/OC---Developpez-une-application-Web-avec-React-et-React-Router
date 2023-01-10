@@ -1,3 +1,6 @@
+.Carousel {
+  flex: 1 0 100%;
+}
 .Carousel,
 .carousel-content {
   position: relative;
@@ -49,6 +52,7 @@
 }
 @media (min-width: 801px) {
   .Carousel .page {
+    color: var(--color-normal-text);
     font-size: 18px;
     font-weight: 500;
     line-height: 25.67px;

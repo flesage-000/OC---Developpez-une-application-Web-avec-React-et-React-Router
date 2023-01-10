@@ -23,16 +23,23 @@
   color: var(--color-bg-medium-light-red);
 }
 @media (max-width: 800px) {
+  body .App > .Kasa {
+    margin-top: 30px;
+  }
   .Kasa {
     flex-direction: column;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 801px) {
+  body .App > .Kasa {
+    margin-top: 25px;
+  }
   .Kasa {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: start;
   }
 }
 
@@ -154,7 +161,6 @@
   .Kasa .accordions {
     flex: 1;
     flex-direction: column;
-    gap: 20px;
   }
 }
 @media (min-width: 801px) {

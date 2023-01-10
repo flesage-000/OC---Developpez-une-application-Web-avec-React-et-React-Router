@@ -52,16 +52,6 @@
 .accordion ul,
 .accordion p {
   color: var(--color-reverse-text);
-}
-.accordion ul {
   font-size: 18px;
   line-height: 25.67px;
 }
-/* @media (max-width: 800px) {
-  .accordion {
-  }
-}
-@media (min-width: 801px) {
-  .accordion {
-  }
-} */

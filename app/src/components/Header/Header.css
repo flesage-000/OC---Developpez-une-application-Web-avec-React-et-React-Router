@@ -58,8 +58,9 @@
 .mainHeader .illustration {
   background-image: var(--headerURL);
   background-color: var(--color-bg-main);
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: calc(var(--corner-radius-default) * 1.5);
 
   display: flex;
@@ -69,6 +70,13 @@
 
   height: 223px;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .mainHeader .illustration { margin-top: 15px; }
+}
+@media (min-width: 801px) {
+  .mainHeader .illustration { margin-top: 63px; }
 }
 
 .mainHeader p {
