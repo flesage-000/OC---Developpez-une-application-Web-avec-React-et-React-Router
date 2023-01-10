@@ -1,6 +1,7 @@
 .thumb {
   background: linear-gradient(179deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 209%), var(--thumb-bkg) center center no-repeat, var(--color-bg-medium-light-red);
   border-radius: var(--corner-radius-default);
+  cursor: pointer;
 
   aspect-ratio: 1 / 1;
   /* height: 340px;
