@@ -23,6 +23,8 @@ function Kasa() {
     content = <div className="App">
     <Header />
 
+    <Carousel pictures={ kasa.pictures } />
+
     <div className="Kasa">
 
       <div className="description_primary">
