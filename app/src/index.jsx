@@ -1,37 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import Routing from './routing';
 
 import './index.css';
-import App from './pages/Home/App';
-import About from './pages/About/About';
-import Kasa from './pages/Kasa/Kasa';
-import Error from './pages/Error/Error';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/Kasa/:kasaId",
-    element: <Kasa />,
-  },
-  {
-    path: "About",
-    element: <About />,
-  },
-  {
-    path: "*",
-    element: <Error />,
-  }
-]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Routing />
   </React.StrictMode>
 );
 
