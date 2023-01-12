@@ -148,6 +148,9 @@
 @media (min-width: 801px) {
   .Kasa .description_host .stars {
     margin-top: 24px;
+    width: 100%;
+
+    text-align: right
   }
 }
 .Kasa .accordions {
