@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Hostname.css';
 
 function Hostname({ names }) {

@@ -1,6 +1,8 @@
+import React from 'react';
+
 import './App.css';
 
-import logements from '../../../public/data/logements.json';
+import logements from '../../data/logements.json';
 
 import Thumbs from '../../components/Thumbs/Thumbs';
 import Header from '../../components/Header/Header';

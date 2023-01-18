@@ -1,6 +1,7 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import logements from '../../../public/data/logements.json';
+import logements from '../../data/logements.json';
 
 import './Kasa.css';
 
@@ -15,7 +16,7 @@ import Error from '../Error/Error';
 
 function Kasa() {
   const { kasaId } = useParams();
-  const kasa = logements.filter(data => data.id == kasaId)[0];
+  const kasa = logements.filter(data => data.id === kasaId)[0];
   let content = '';
 
   if (kasa !== undefined) {
@@ -43,7 +44,9 @@ function Kasa() {
         <Hostname names={ kasa.host.name } />
 
         <div className="avatar">
-          <img src={ kasa.host.picture } alt="Avatar de `${ kasa.host.name }`" title={ kasa.host.name } />
+          <img  src={ kasa.host.picture }
+                alt="Avatar"
+                title={ kasa.host.name } />
         </div>
 
         <Rating rate={ kasa.rating } />

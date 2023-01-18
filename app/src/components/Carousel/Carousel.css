@@ -66,6 +66,10 @@
   }
 }
 
+.Carousel button {
+  background-color: transparent;
+}
+
 .Carousel .prev,
 .Carousel .next {
   color: var(--color-normal-text);

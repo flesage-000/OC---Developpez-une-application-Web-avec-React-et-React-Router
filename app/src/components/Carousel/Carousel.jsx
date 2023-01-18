@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./Carousel.css";
 
 import { useState } from "react";
@@ -30,8 +32,8 @@ function Carousel(pictures) {
 
         { pictures.pictures.map((picture, index) => <Slide key={ index + 1 } data={ [picture, index] } />) }
 
-        { picturesLength > 1 ? <a className="prev" onClick={ prevSlide }>&#10094;</a> : null }
-        { picturesLength > 1 ? <a className="next" onClick={ nextSlide }>&#10095;</a> : null }
+        { picturesLength > 1 ? <button className="prev" href="#" onClick={ prevSlide }>&#10094;</button> : null }
+        { picturesLength > 1 ? <button className="next" href="#" onClick={ nextSlide }>&#10095;</button> : null }
 
       </div>
 

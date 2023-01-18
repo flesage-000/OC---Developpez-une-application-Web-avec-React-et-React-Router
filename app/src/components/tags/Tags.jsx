@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Tags.css';
 
 function Tags({ tags }) {
